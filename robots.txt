@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://othmanshbeir.github.io/sitemap.xml
+Sitemap: https://othman-shbeir.github.io/sitemap.xml
