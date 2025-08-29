@@ -4,83 +4,83 @@
     - name: Full Name
       value: Othman Shbeir
     - name: Date of Birth
-      value: 11th June 2006
+      value: "11th June 2006"
     - name: Languages
-      value: Arabic (Native), English (Professional working proficiency, C1)
+      value: "Arabic (Native), English (Professional working proficiency, C1)"
 
 - title: Education
   type: time_table
   contents:
     - title: B.Sc. in Computer Science
       institution: Islamic University of Gaza
-      year: 2019 - 2025
+      year: "2019 - 2025"
       description:
-        - Valedictorian, GPA: 95.34% (Ranked 1st in cohort).
-        - Thesis: *HarmOni: Harmonizing Media and Social Experience*.
-        - Coursework: AI, ML, Data Science, Algorithms, Computer Vision, Software Engineering, Cloud Computing.
+        - "Valedictorian, GPA: 95.34% (Ranked 1st in cohort)."
+        - "Thesis: *HarmOni: Harmonizing Media and Social Experience*."
+        - "Coursework: AI, ML, Data Science, Algorithms, Computer Vision, Software Engineering, Cloud Computing."
     - title: Amideast Access Alumni Program
       institution: Amideast
-      year: 2017 - 2019
+      year: "2017 - 2019"
       description:
-        - English Language and Leadership Scholarship.
-        - Champion, Climate Thinkathon (2023) with sustainability project *ReUseIt*.
+        - "English Language and Leadership Scholarship."
+        - "Champion, Climate Thinkathon (2023) with sustainability project *ReUseIt*."
 
 - title: Experience
   type: time_table
   contents:
-    - title: Teaching Assistant — Programming 3 Lab
+    - title: "Teaching Assistant — Programming 3 Lab"
       institution: Islamic University of Gaza
-      year: 2025 - Present
+      year: "2025 - Present"
       description:
-        - Led weekly labs on JavaFX, Streams, Spring, and Multithreading.
-        - Mentored 150+ students with code reviews and workshops.
+        - "Led weekly labs on JavaFX, Streams, Spring, and Multithreading."
+        - "Mentored 150+ students with code reviews and workshops."
     - title: AI Engineer Intern
       institution: AURA for Integrated Solutions
-      year: 2023
+      year: "2023"
       description:
-        - Developed computer vision pipelines using PyTorch, TensorFlow, and YOLO.
-        - Contributed to 5+ large-scale AI projects with deployment considerations.
+        - "Developed computer vision pipelines using PyTorch, TensorFlow, and YOLO."
+        - "Contributed to 5+ large-scale AI projects with deployment considerations."
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/cu2021/LeetCodeExecirses">LeetCode Exercises</a>
-      year: 2022-now
-      description: A collection of algorithmic solutions and problem-solving exercises.
-    - title: <a href="https://github.com/othman-shbeir">Personal GitHub</a>
-      year: 2021-now
-      description: Open-source projects in AI, computer vision, recommendation systems, and web development.
+    - title: "<a href='https://github.com/cu2021/LeetCodeExecirses'>LeetCode Exercises</a>"
+      year: "2022-now"
+      description: "A collection of algorithmic solutions and problem-solving exercises."
+    - title: "<a href='https://github.com/othman-shbeir'>Personal GitHub</a>"
+      year: "2021-now"
+      description: "Open-source projects in AI, computer vision, recommendation systems, and web development."
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2025
+    - year: "2025"
       items:
-        - Valedictorian, Computer Science (Islamic University of Gaza).
-    - year: 2023
+        - "Valedictorian, Computer Science (Islamic University of Gaza)."
+    - year: "2023"
       items:
-        - 6th Place — Udacity Hackathon (*Student Grade Forecaster*).
-        - Champion — Climate Thinkathon (*ReUseIt*).
-    - year: 2019
+        - "6th Place — Udacity Hackathon (*Student Grade Forecaster*)."
+        - "Champion — Climate Thinkathon (*ReUseIt*)."
+    - year: "2019"
       items:
-        - Access Alumni Leadership Recognition (Amideast).
+        - "Access Alumni Leadership Recognition (Amideast)."
 
 - title: Academic Interests
   type: nested_list
   contents:
     - title: Artificial Intelligence & Machine Learning
       items:
-        - Large Language Models & NLP.
-        - Applied AI for education, media, and healthcare.
+        - "Large Language Models & NLP."
+        - "Applied AI for education, media, and healthcare."
     - title: Computer Vision & Data Science
       items:
-        - Image recognition and detection.
-        - Predictive modeling and analytics.
+        - "Image recognition and detection."
+        - "Predictive modeling and analytics."
     - title: Recommender Systems
       items:
-        - Hybrid recommendation methods (content-based, collaborative, popularity signals).
+        - "Hybrid recommendation methods (content-based, collaborative, popularity signals)."
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Teaching, community volunteering, exploring emerging AI tools, and problem-solving challenges.
+    - "<u>Hobbies:</u> Teaching, community volunteering, exploring emerging AI tools, and problem-solving challenges."
