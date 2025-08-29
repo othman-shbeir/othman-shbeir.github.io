@@ -169,23 +169,23 @@
       "keywords": ["Python", "Java", "JavaScript", "C", "C++", "SQL"]
     },
     {
-      "name": "<i class="fa-solid fa-brain-circuit"></i> Machine Learning and AI Frameworks",
+      "name": "Machine Learning and AI Frameworks",
       "keywords": ["PyTorch", "TensorFlow", "YOLO"]
     },
     {
-      "name": "<i class="fa-solid fa-chart-mixed"></i> Data Science Tools",
+      "name": "Data Science Tools",
       "keywords": ["Pandas", "NumPy", "Power BI", "Tableau", "Excel"]
     },
     {
-      "name": "<i class="fa-solid fa-rectangle-terminal"></i> Development Frameworks",
+      "name": "Development Frameworks",
       "keywords": ["Angular", "React", "Node.js", "Nest.js", "Spring Boot", "JavaFX"]
     },
     {
-      "name": "<i class="fa-sharp fa-solid fa-screwdriver-wrench"></i> Other Tools",
+      "name": "Other Tools",
       "keywords": ["Git", "Docker", "Linux", "LaTeX", "AWS", "Google Cloud"]
     },
     {
-      "name": "<i class="fa-solid fa-handshake"></i> Soft Skills",
+      "name": "Soft Skills",
       "keywords": ["Leadership", "Teaching", "Teamwork", "Problem-Solving", "Communication", "Academic Writing"]
     }
   ],
