@@ -96,8 +96,7 @@
         "Built supervised models in scikit-learn",
         "Designed dashboard for insights and interventions"
       ],
-      "startDate": "2023-09",
-      "endDate": "2023-09",
+      "date": "2023-09",
       "url": "https://github.com/othman-shbeir/pdsnd_github"
     },
     {
@@ -107,8 +106,7 @@
         "Analyzed trip seasonality and demand patterns",
         "Insights on trip duration, peak times, user segments"
       ],
-      "startDate": "2023-09",
-      "endDate": "2023-09"
+      "date": "2023-09"
     },
     {
       "name": "Sakila SQL Database Analysis (Udacity)",
@@ -117,7 +115,7 @@
         "Optimized SQL for segmentation and sales trends",
         "Built Power BI dashboards for decisions"
       ],
-      "startDate": "2023-07"
+      "date": "2023-07"
     }
   ],
   "certificates": [
@@ -212,8 +210,7 @@
     {
       "organization": "Amideast",
       "position": "Operations Supervisor — Community Fun Day",
-      "startDate": "2019-07",
-      "endDate": "2019-07",
+      "date": "2019-07",
       "summary": "Managed volunteers and operations for a community event."
     },
     {
@@ -226,8 +223,7 @@
     {
       "organization": "Ranteesi Hospital",
       "position": "Event Coordinator",
-      "startDate": "2019-05",
-      "endDate": "2019-05",
+      "date": "2019-07",
       "summary": "Organized fun day for children with cancer."
     }
   ]
