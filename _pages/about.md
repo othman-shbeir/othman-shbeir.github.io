@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Computer Science Graduate · AI & Data Science Enthusiast · Teaching Assistant
+subtitle: Computer Science Graduate | AI & Data Science Enthusiast | Teaching Assistant
 
 profile:
   align: right
