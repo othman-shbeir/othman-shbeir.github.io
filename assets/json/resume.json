@@ -126,81 +126,57 @@
     {
       "name": "Google Project Management Specialization",
       "date": "2023-09",
-      "issuer": "Coursera",
-      "description": "Completed a comprehensive program covering Agile management, project planning, risk management, and stakeholder communication. Applied project management strategies to real-world case studies."
+      "issuer": "Coursera"
     },
     {
       "name": "Capstone: Applying Project Management in the Real World",
       "date": "2023-05",
-      "issuer": "Coursera",
-      "description": "Applied project management skills to a real-world scenario, including stakeholder management, quality assurance, and effective communication."
+      "issuer": "Coursera"
     },
     {
       "name": "Project Execution: Running the Project",
       "date": "2023-04",
-      "issuer": "Coursera",
-      "description": "Learned strategies for successful project execution, focusing on risk management, quality control, and task coordination."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Project Planning: Putting It All Together",
       "date": "2023-03",
-      "issuer": "Coursera",
-      "description": "Covered task estimation, strategic thinking, budgeting, risk management, and overall project planning techniques."
-    },
+      "issuer": "Coursera"    },
     {
       "name": "Agile Project Management",
       "date": "2022-05",
-      "issuer": "Coursera",
-      "description": "Completed a course on Agile methodologies, Scrum frameworks, coaching, and problem-solving in team environments."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Data Science Nanodegree",
       "date": "2023-08",
-      "issuer": "Udacity",
-      "description": "Completed professional training in Python, SQL, and data analysis. Applied programming skills to real-world data science projects."
-    },
+      "issuer": "Udacity"    },
     {
       "name": "Google IT Automation with Python Specialization",
       "date": "2023-03",
-      "issuer": "Coursera",
-      "description": "Completed a specialization focused on Python scripting, debugging, and IT automation. Applied Python-based automation to operational tasks."
-    },
+      "issuer": "Coursera"  },
     {
       "name": "Configuration Management and the Cloud",
       "date": "2023-03",
-      "issuer": "Coursera",
-      "description": "Completed training on cloud provisioning, configuration management, and scalable architecture. Applied cloud and configuration practices in hands-on exercises."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Automating Real-World Tasks with Python",
       "date": "2023-03",
-      "issuer": "Coursera",
-      "description": "Learned to automate IT workflows, including serialization, scripting, and error handling with Python."
-    },
+      "issuer": "Coursera" },
     {
       "name": "Troubleshooting and Debugging Techniques",
       "date": "2022-12",
-      "issuer": "Coursera",
-      "description": "Completed a course on debugging, error tracing, and problem-solving techniques. Applied structured approaches to identify and resolve software issues."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Introduction to Git and GitHub",
       "date": "2022-11",
-      "issuer": "Coursera",
-      "description": "Completed a course on version control, branching, merging, and collaboration. Applied Git and GitHub to manage project workflows and source code."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Using Python to Interact with the Operating System",
       "date": "2022-11",
-      "issuer": "Coursera",
-      "description": "Learned to automate system administration tasks using Python, including software testing, bash scripting, and regular expressions."
-    },
+      "issuer": "Coursera"},
     {
       "name": "Crash Course on Python",
       "date": "2022-09",
-      "issuer": "Coursera",
-      "description": "Completed an introductory Python course covering fundamental programming concepts and basic coding practices."
-    }
+      "issuer": "Coursera"}
   ],
   "awards": [
     {
