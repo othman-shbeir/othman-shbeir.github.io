@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-résumé",
           title: "Résumé",
-          description: "Download my CV and learn more about my academic background, teaching, projects, and research.",
+          description: "My Résumé",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
