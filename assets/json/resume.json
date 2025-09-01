@@ -25,7 +25,8 @@
         "url": "https://www.linkedin.com/in/othmanshbeir"
       }
     ]
-  }, "education": [
+  },
+  "education": [
     {
       "institution": "Islamic University of Gaza",
       "location": "Gaza, Palestine",
@@ -90,23 +91,25 @@
       "url": "https://github.com/HarmOni-Organization/harmoni-ai"
     },
     {
-      "name": "Student Grade Forecaster (Udacity Hackathon — 6th Place)",
-      "summary": "Predictive ML model to flag at-risk students for early intervention.",
-      "highlights": [
-        "Built supervised models in scikit-learn",
-        "Designed dashboard for insights and interventions"
-      ],
-      "date": "2023-09",
-      "url": "https://github.com/othman-shbeir/pdsnd_github"
-    },
-    {
       "name": "Bikeshare Data Analysis (Udacity)",
       "summary": "Exploratory data analysis of bikeshare usage across cities.",
       "highlights": [
         "Analyzed trip seasonality and demand patterns",
         "Insights on trip duration, peak times, user segments"
       ],
-      "date": "2023-09"
+      "startDate": "2023-09",
+      "endDate": "2023-09"
+    },
+    {
+      "name": "Student Grade Forecaster (Udacity Hackathon — 6th Place)",
+      "summary": "Predictive ML model to flag at-risk students for early intervention.",
+      "highlights": [
+        "Built supervised models in scikit-learn",
+        "Designed dashboard for insights and interventions"
+      ],
+      "startDate": "2023-09",
+      "endDate": "2023-09",
+      "url": "https://github.com/othman-shbeir/pdsnd_github"
     },
     {
       "name": "Sakila SQL Database Analysis (Udacity)",
@@ -115,26 +118,101 @@
         "Optimized SQL for segmentation and sales trends",
         "Built Power BI dashboards for decisions"
       ],
-      "date": "2023-07"
+      "startDate": "2023-07",
+      "endDate": "2023-07"
     }
   ],
-  "certificates": [
-    {
-      "name": "Data Science Nanodegree",
-      "date": "2023-09",
-      "issuer": "Udacity"
-    },
-    {
-      "name": "Google IT Automation with Python Professional Certificate",
-      "date": "2023-03",
-      "issuer": "Coursera"
-    },
-    {
-      "name": "Google Project Management Specialization",
-      "date": "2022-12",
-      "issuer": "Coursera"
-    }
-  ],
+"certificates": [
+  {
+    "category": "Project Management",
+    "items": [
+      {
+        "name": "Google Project Management Specialization – Coursera",
+        "date": "2023-09",
+        "issuer": "Coursera",
+        "description": "Completed a comprehensive program covering Agile management, project planning, risk management, and stakeholder communication. Applied project management strategies to real-world case studies."
+      },
+      {
+        "name": "Capstone: Applying Project Management in the Real World – Coursera",
+        "date": "2023-05",
+        "issuer": "Coursera",
+        "description": "Applied project management skills to a real-world scenario, including stakeholder management, quality assurance, and effective communication."
+      },
+      {
+        "name": "Project Execution: Running the Project – Coursera",
+        "date": "2023-04",
+        "issuer": "Coursera",
+        "description": "Learned strategies for successful project execution, focusing on risk management, quality control, and task coordination."
+      },
+      {
+        "name": "Project Planning: Putting It All Together – Coursera",
+        "date": "2023-03",
+        "issuer": "Coursera",
+        "description": "Covered task estimation, strategic thinking, budgeting, risk management, and overall project planning techniques."
+      },
+      {
+        "name": "Agile Project Management – Coursera",
+        "date": "2022-05",
+        "issuer": "Coursera",
+        "description": "Completed a course on Agile methodologies, Scrum frameworks, coaching, and problem-solving in team environments."
+      }
+    ]
+  },
+  {
+    "category": "Data Science & Analytics",
+    "items": [
+      {
+        "name": "Data Science Nanodegree – Udacity",
+        "date": "2023-08",
+        "issuer": "Udacity",
+        "description": "Completed professional training in Python, SQL, and data analysis. Applied programming skills to real-world data science projects."
+      },
+      {
+        "name": "Google IT Automation with Python Specialization – Coursera",
+        "date": "2023-03",
+        "issuer": "Coursera",
+        "description": "Completed a specialization focused on Python scripting, debugging, and IT automation. Applied Python-based automation to operational tasks."
+      },
+      {
+        "name": "Configuration Management and the Cloud – Coursera",
+        "date": "2023-03",
+        "issuer": "Coursera",
+        "description": "Completed training on cloud provisioning, configuration management, and scalable architecture. Applied cloud and configuration practices in hands-on exercises."
+      },
+      {
+        "name": "Automating Real-World Tasks with Python – Coursera",
+        "date": "2023-03",
+        "issuer": "Coursera",
+        "description": "Learned to automate IT workflows, including serialization, scripting, and error handling with Python."
+      },
+      {
+        "name": "Troubleshooting and Debugging Techniques – Coursera",
+        "date": "2022-12",
+        "issuer": "Coursera",
+        "description": "Completed a course on debugging, error tracing, and problem-solving techniques. Applied structured approaches to identify and resolve software issues."
+      },
+      {
+        "name": "Introduction to Git and GitHub – Coursera",
+        "date": "2022-11",
+        "issuer": "Coursera",
+        "description": "Completed a course on version control, branching, merging, and collaboration. Applied Git and GitHub to manage project workflows and source code."
+      },
+      {
+        "name": "Using Python to Interact with the Operating System – Coursera",
+        "date": "2022-11",
+        "issuer": "Coursera",
+        "description": "Learned to automate system administration tasks using Python, including software testing, bash scripting, and regular expressions."
+      },
+      {
+        "name": "Crash Course on Python – Coursera",
+        "date": "2022-09",
+        "issuer": "Coursera",
+        "description": "Completed an introductory Python course covering fundamental programming concepts and basic coding practices."
+      }
+    ]
+  }
+]
+,
   "awards": [
     {
       "title": "Valedictorian, Computer Science",
@@ -160,7 +238,6 @@
       "awarder": "Amideast"
     }
   ],
-  
   "skills": [
     {
       "name": "Programming",
@@ -196,7 +273,8 @@
       "language": "English",
       "fluency": "C1 (Professional Working Proficiency)"
     }
-  ],"interests": [
+  ],
+  "interests": [
     {
       "name": "Machine Learning & AI",
       "keywords": ["LLMs", "NLP", "Computer Vision", "Recommender Systems", "Predictive Modeling"]
@@ -208,9 +286,17 @@
   ],
   "volunteer": [
     {
+      "organization": "Ranteesi Hospital",
+      "position": "Event Coordinator",
+      "startDate": "2019-07",
+      "endDate": "2019-07",
+      "summary": "Organized fun day for children with cancer."
+    },
+    {
       "organization": "Amideast",
       "position": "Operations Supervisor — Community Fun Day",
-      "date": "2019-07",
+      "startDate": "2019-07",
+      "endDate": "2019-07",
       "summary": "Managed volunteers and operations for a community event."
     },
     {
@@ -219,13 +305,6 @@
       "startDate": "2019-06",
       "endDate": "2019-07",
       "summary": "Provided IT support and troubleshooting."
-    },
-    {
-      "organization": "Ranteesi Hospital",
-      "position": "Event Coordinator",
-      "date": "2019-07",
-      "summary": "Organized fun day for children with cancer."
     }
   ]
-  
 }
