@@ -127,73 +127,85 @@
   ],
   "certificates": [
     {
+      "name": "Programming for Data Science with Python",
+      "date": "2023-08",
+      "issuer": "Udacity",
+      "url": "confirm.udacity.com/e/769d0af6-f95c-11ed-8306-032d50cad574"
+    },
+    {
+      "name": "Automating Real-World Tasks with Python",
+      "date": "2023-03",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/3G45AYFDWRPX"
+    },
+    {
+      "name": "Configuration Management and the Cloud",
+      "date": "2023-03",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/LUBGZ7ZLEGMV"
+    },
+    {
+      "name": "Google IT Automation with Python Specialization",
+      "date": "2023-03",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/JGJBE4ANUH3B"
+    },
+    {
+      "name": "Troubleshooting and Debugging Techniques",
+      "date": "2022-12",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/32PKRX5QKSNP"
+    },
+    {
+      "name": "Introduction to Git and GitHub",
+      "date": "2022-11",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/SEW224JBQGZZ"
+    },
+    {
+      "name": "Using Python to Interact with the Operating System",
+      "date": "2022-11",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/R32QYTVW7F2K"
+    },
+    {
+      "name": "Crash Course on Python",
+      "date": "2022-09",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/9QEHBXJLSTC2"
+    },
+    {
+      "name": "Agile Project Management",
+      "date": "2022-05",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/PP79RGMVSC7H"
+    },
+    {
+      "name": "Capstone: Applying Project Management in the Real World",
+      "date": "2022-05",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/J9NQYJ7HQFWP"
+    },
+    {
       "name": "Google Project Management Specialization",
       "date": "2022-05",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/GELRSAV3G2YP"
     },
     {
-      "name": "Capstone: Applying Project Management in the Real World",
-      "date": "2023-05",
+      "name": "Project Execution: Running the Project",
+      "date": "2022-04",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/J9NQYJ7HQFWP"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/2LP7FHTB496E"
     },
     {
-      "name": "Project Execution: Running the Project",
-      "date": "2023-04",
-      "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/2LP7FHTB496E"},
-    {
       "name": "Project Planning: Putting It All Together",
-      "date": "2023-03",
+      "date": "2022-03",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/34F2F47ANR3R"},
-    {
-      "name": "Agile Project Management",
-      "date": "2022-05",
-      "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/PP79RGMVSC7H"},
-    {
-      "name": "Data Science Nanodegree",
-      "date": "2023-08",
-      "issuer": "Udacity",
-      "url": "confirm.udacity.com/e/769d0af6-f95c-11ed-8306-032d50cad574"},
-    {
-      "name": "Google IT Automation with Python Specialization",
-      "date": "2023-03",
-      "issuer": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/JGJBE4ANUH3B"  },
-    {
-      "name": "Configuration Management and the Cloud",
-      "date": "2023-03",
-      "issuer": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/LUBGZ7ZLEGMV"  },
-    {
-      "name": "Automating Real-World Tasks with Python",
-      "date": "2023-03",
-      "issuer": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/3G45AYFDWRPX"},
-    {
-      "name": "Troubleshooting and Debugging Techniques",
-      "date": "2022-12",
-      "issuer": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/32PKRX5QKSNP"},
-    {
-      "name": "Introduction to Git and GitHub",
-      "date": "2022-11",
-      "issuer": "Coursera",
-    "url":"https://www.coursera.org/account/accomplishments/certificate/SEW224JBQGZZ"},
-    {
-      "name": "Using Python to Interact with the Operating System",
-      "date": "2022-11",
-      "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/R32QYTVW7F2K"},
-    {
-      "name": "Crash Course on Python",
-      "date": "2022-09",
-      "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/SEW224JBQGZZ"}
-  ],
+      "url": "https://www.coursera.org/account/accomplishments/certificate/34F2F47ANR3R"
+    }
+]
+,
   "awards": [
     {
       "title": "Valedictorian, Computer Science",
