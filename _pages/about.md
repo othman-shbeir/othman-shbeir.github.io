@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Computer Science Graduate · AI & Data Science Enthusiast · Teaching Assistant
 
