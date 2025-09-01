@@ -38,12 +38,13 @@
       "score": "95.34% (Ranked 1st in cohort)"
     },
     {
-      "institution": "Amideast Access micro-scholarship Program Alumni",
+      "institution": "Amideast",
       "location": "Gaza, Palestine",
-      "studyType": "English Language, community service and Leadership Scholarship",
+      "url": "https://www.amideast.org/",
+      "studyType": " Access micro-scholarship Program ",
       "startDate": "2017-12",
       "endDate": "2019-08",
-      "summary": "Strengthened academic English (C1) and leadership via community engagement.",
+      "summary": "English Language, community service and Leadership Scholarship.",
       "highlights": [
         "Champion, Climate Thinkathon (2023) — led team ReUseIt to 1st place",
         "Leadership recognition and scholarship award"
@@ -66,7 +67,7 @@
     {
       "name": "AURA for Integrated Solutions",
       "position": "AI Engineer Intern",
-      "url": "",
+      "url": "https://www.facebook.com/technologyaura/",
       "startDate": "2023-06",
       "endDate": "2023-09",
       "summary": "Applied ML and computer vision to real-world projects.",
@@ -98,7 +99,8 @@
         "Insights on trip duration, peak times, user segments"
       ],
       "startDate": "2023-09",
-      "endDate": "2023-09"
+      "endDate": "2023-09",
+      "url": "https://github.com/othman-shbeir/pdsnd_github"
     },
     {
       "name": "Student Grade Forecaster (Udacity Hackathon — 6th Place)",
@@ -109,7 +111,7 @@
       ],
       "startDate": "2023-09",
       "endDate": "2023-09",
-      "url": "https://github.com/othman-shbeir/pdsnd_github"
+      "url": "https://github.com/othman-shbeir/Students_grade_forcasting"
     },
     {
       "name": "Sakila SQL Database Analysis (Udacity)",
@@ -119,64 +121,78 @@
         "Built Power BI dashboards for decisions"
       ],
       "startDate": "2023-07",
-      "endDate": "2023-07"
+      "endDate": "2023-07",
+      "url": "https://github.com/othman-shbeir/Sakila-DVD-Rental-Data-Analysis"
     }
   ],
   "certificates": [
     {
       "name": "Google Project Management Specialization",
-      "date": "2023-09",
-      "issuer": "Coursera"
+      "date": "2022-05",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/GELRSAV3G2YP"
     },
     {
       "name": "Capstone: Applying Project Management in the Real World",
       "date": "2023-05",
-      "issuer": "Coursera"
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/J9NQYJ7HQFWP"
     },
     {
       "name": "Project Execution: Running the Project",
       "date": "2023-04",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/2LP7FHTB496E"},
     {
       "name": "Project Planning: Putting It All Together",
       "date": "2023-03",
-      "issuer": "Coursera"    },
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/34F2F47ANR3R"},
     {
       "name": "Agile Project Management",
       "date": "2022-05",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/PP79RGMVSC7H"},
     {
       "name": "Data Science Nanodegree",
       "date": "2023-08",
-      "issuer": "Udacity"    },
+      "issuer": "Udacity",
+      "url": "confirm.udacity.com/e/769d0af6-f95c-11ed-8306-032d50cad574"},
     {
       "name": "Google IT Automation with Python Specialization",
       "date": "2023-03",
-      "issuer": "Coursera"  },
+      "issuer": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/JGJBE4ANUH3B"  },
     {
       "name": "Configuration Management and the Cloud",
       "date": "2023-03",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/LUBGZ7ZLEGMV"  },
     {
       "name": "Automating Real-World Tasks with Python",
       "date": "2023-03",
-      "issuer": "Coursera" },
+      "issuer": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/3G45AYFDWRPX"},
     {
       "name": "Troubleshooting and Debugging Techniques",
       "date": "2022-12",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/32PKRX5QKSNP"},
     {
       "name": "Introduction to Git and GitHub",
       "date": "2022-11",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+    "url":"https://www.coursera.org/account/accomplishments/certificate/SEW224JBQGZZ"},
     {
       "name": "Using Python to Interact with the Operating System",
       "date": "2022-11",
-      "issuer": "Coursera"},
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/R32QYTVW7F2K"},
     {
       "name": "Crash Course on Python",
       "date": "2022-09",
-      "issuer": "Coursera"}
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/SEW224JBQGZZ"}
   ],
   "awards": [
     {
@@ -262,7 +278,8 @@
       "position": "Operations Supervisor — Community Fun Day",
       "startDate": "2019-07",
       "endDate": "2019-07",
-      "summary": "Managed volunteers and operations for a community event."
+      "summary": "Managed volunteers and operations for a community event.",
+      "url": "https://www.amideast.org/"
     },
     {
       "organization": "Nasser Hospital",
