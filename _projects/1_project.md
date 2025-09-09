@@ -1,7 +1,7 @@
 ---
 layout: page
-title: HarmOni - All-In-One Entertainment Hub
-description: Desktop platform that unifies synchronized watch parties, a rich local media library, and a hybrid recommender for movies & anime. NestJS/Electron frontend with a Flask-based recommendation service.
+title: HarmOni
+description: All-in-one synchronized viewing, local media library, and hybrid recommendations.
 img: /assets/img/projects/13.jpg
 importance: 1
 category: HarmOni
@@ -9,32 +9,26 @@ related_publications: true
 # redirect: https://youtu.be/ZzxAlox9lGQ
 ---
 
-**What it is.** HarmOni is a desktop app that lets friends watch in sync, organizes a local media library with detailed metadata, and personalizes discovery via a hybrid recommendation engine.
+**Overview.** HarmOni is a desktop application that brings friends together to watch in sync, organizes a rich local media library, and personalizes discovery using a hybrid recommendation engine—designed for smooth playback, clean UX, and fast, relevant results.
 
+**Key features**
+- **Watch-together:** real-time session control (play/pause/seek) with seamless synchronization.
+- **Smart library:** fast search, faceted filters, and detailed metadata for movies and anime.
+- **Personalization:** hybrid ranking that blends content similarity, collaborative filtering (SVD), a popularity prior (IMDb-style weighted rating), and a gentle recency boost.
+- **Modular design:** Electron/NestJS desktop shell communicating with a Flask recommendation service for clean separation and easy iteration.
 
-**Highlights**
-- Watch‑together sessions with pause/seek sync and session controls.
-- Local library with search, filters, and rich metadata.
-- Personalization via hybrid ranking (content + CF + popularity + recency).
-- Modular architecture: NestJS/Electron UI ↔ Flask recommender API.
-
-
-**Stack**
-Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit‑learn, Surprise (SVD), Jinja, Mongo DB
-
+**Tech stack**
+Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit-learn, Surprise (SVD), Jinja, **MongoDB**
 
 **Architecture (simplified)**
-1) UI (Electron/NestJS) authenticates & collects context
-2) Requests `/recommend` from Flask service
-3) Service blends CF (SVD) + content similarity + IMDb‑style weighted rating + recency
-4) Returns ranked items + lightweight “why this” explanation
+1) The Electron/NestJS UI authenticates the user and gathers context.  
+2) It calls the Flask API endpoint (e.g., `/recommend`) with user/profile signals.  
+3) The service combines **CF (SVD)** + **content similarity** + **IMDb-style weighted rating** + **recency** into a final ranked list (with cold-start handled via content/popularity).  
+4) The UI receives top-N items plus brief “why this” signals to improve transparency.
 
+**Datasets**
+- **Movies:** [TMDB](https://www.themoviedb.org/) (titles/credits/metadata) joined with MovieLens ratings.  
+- **Anime:** [MyAnimeList](https://myanimelist.net/) datasets on [Kaggle](https://www.kaggle.com/) with rich metadata and user scores.
 
-**Data Sources**
-- Movies: TMDB + MovieLens ratings
-- Anime: MAL/Kaggle datasets (metadata + user scores)
-
-
-**Screenshots**
-{% include figure.liquid path="/assets/img/projects/13.jpg" title="Session controls & synced playback" class="img-fluid rounded z-depth-1" %}
-{% include figure.liquid path="/assets/img/projects/13.jpg" title="Personalized home feed" class="img-fluid rounded z-depth-1" %}
+**Links**
+- [GitHub](https://github.com/HarmOni-Organization)
