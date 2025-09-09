@@ -5,7 +5,7 @@ description: All-in-one synchronized viewing, local media library, and hybrid re
 img: /assets/img/projects/13.jpg
 importance: 1
 category: HarmOni
-related_publications: true
+related_publications: false
 # redirect: https://youtu.be/ZzxAlox9lGQ
 ---
 
