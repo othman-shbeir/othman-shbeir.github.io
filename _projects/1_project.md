@@ -2,11 +2,11 @@
 layout: page
 title: HarmOni - All-In-One Entertainment Hub
 description: Desktop platform that unifies synchronized watch parties, a rich local media library, and a hybrid recommender for movies & anime. NestJS/Electron frontend with a Flask-based recommendation service.
-img: assets/img/13.jpg
+img: /assets/img/projects/13.jpg
 importance: 1
 category: HarmOni
 related_publications: true
-redirect: https://youtu.be/ZzxAlox9lGQ
+# redirect: https://youtu.be/ZzxAlox9lGQ
 ---
 
 **What it is.** HarmOni is a desktop app that lets friends watch in sync, organizes a local media library with detailed metadata, and personalizes discovery via a hybrid recommendation engine.
@@ -36,5 +36,5 @@ Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit‑learn, Surprise (S
 
 
 **Screenshots**
-{% include figure.liquid path="assets/img/projects/13.jpg" title="Session controls & synced playback" class="img-fluid rounded z-depth-1" %}
-{% include figure.liquid path="assets/img/projects/13.jpg" title="Personalized home feed" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="/assets/img/projects/13.jpg" title="Session controls & synced playback" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="/assets/img/projects/13.jpg" title="Personalized home feed" class="img-fluid rounded z-depth-1" %}

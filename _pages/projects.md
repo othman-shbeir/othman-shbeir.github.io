@@ -2,11 +2,11 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: 
 nav: true
 nav_order: 3
 display_categories: [HarmOni,work,fun]
-horizontal: true
+horizontal: false
 ---
 
 <!-- pages/projects.md -->
