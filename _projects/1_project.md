@@ -21,8 +21,9 @@ related_publications: false
 Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit-learn, Surprise (SVD), Jinja, **MongoDB**
 
 **Architecture (simplified)**
+
 1) The Electron/NestJS UI authenticates the user and gathers context.  
-2) It calls the Flask API endpoint (e.g., `/recommend`) with user/profile signals.  
+2) It calls the Flask API endpoint with user/profile signals.  
 3) The service combines **CF (SVD)** + **content similarity** + **IMDb-style weighted rating** + **recency** into a final ranked list (with cold-start handled via content/popularity).  
 4) The UI receives top-N items plus brief “why this” signals to improve transparency.
 
@@ -31,4 +32,4 @@ Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit-learn, Surprise (SVD
 - **Anime:** [MyAnimeList](https://myanimelist.net/) datasets on [Kaggle](https://www.kaggle.com/) with rich metadata and user scores.
 
 **Links**
-- [GitHub](https://github.com/HarmOni-Organization)
+- [GitHub Link](https://github.com/HarmOni-Organization)
