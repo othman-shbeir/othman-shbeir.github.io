@@ -20,7 +20,7 @@ redirect: https://youtu.be/ZzxAlox9lGQ
 
 
 **Stack**
-Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit‑learn, Surprise (SVD), Jinja, SQLite/PostgreSQL (as applicable)
+Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit‑learn, Surprise (SVD), Jinja, Mongo DB
 
 
 **Architecture (simplified)**
