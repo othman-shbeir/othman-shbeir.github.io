@@ -1,65 +1,34 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
-description: 
-nav: true
-nav_order: 3
-display_categories: [HarmOni,work,fun]
-horizontal: false
+title: HarmOni
+description: All-in-one synchronized viewing, local media library, and hybrid recommendations.
+img: /assets/img/projects/13.jpg
+importance: 1
+category: HarmOni
+related_publications: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+**Overview.** HarmOni is a desktop application that brings friends together to watch in sync, organizes a rich local media library, and personalizes discovery using a hybrid recommendation engine—designed for smooth playback, clean UX, and fast, relevant results.
 
-{% else %}
+**Key features**
+- **Watch-together:** real-time session control (play/pause/seek) with seamless synchronization.
+- **Smart library:** fast search, faceted filters, and detailed metadata for movies and anime.
+- **Personalization:** hybrid ranking that blends content similarity, collaborative filtering (SVD), a popularity prior (IMDb-style weighted rating), and a gentle recency boost.
+- **Modular design:** Electron/NestJS desktop shell communicating with a Flask recommendation service for clean separation and easy iteration.
 
-<!-- Display projects without categories -->
+**Tech stack**
+Electron, NestJS, TypeScript, Python, Flask, Pandas, scikit-learn, Surprise (SVD), Jinja, **MongoDB**
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**Architecture (simplified)**
 
-  <!-- Generate cards for each project -->
+1) The Electron/NestJS UI authenticates the user and gathers context.  
+2) It calls the Flask API endpoint with user/profile signals.  
+3) The service combines **CF (SVD)** + **content similarity** + **IMDb-style weighted rating** + **recency** into a final ranked list (with cold-start handled via content/popularity).  
+4) The UI receives top-N items plus brief “why this” signals to improve transparency.
 
-{% if page.horizontal %}
+**Datasets**
+- **Movies:** [TMDB](https://www.themoviedb.org/) (titles/credits/metadata) joined with MovieLens ratings.  
+- **Anime:** [MyAnimeList](https://myanimelist.net/) datasets on [Kaggle](https://www.kaggle.com/) with rich metadata and user scores.
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+**Links**:
+- [Project Demo.](https://youtu.be/ZzxAlox9lGQ)
