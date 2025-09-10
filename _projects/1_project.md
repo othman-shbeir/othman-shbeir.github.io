@@ -2,7 +2,7 @@
 
 layout: page
 title: HarmOni
-description: All-in-one synchronized viewing, local media library, and hybrid recommendations.
+description: An all-in-one solution for synchronized viewing, local media management, and hybrid recommendations.
 img: /assets/img/projects/13.jpg
 importance: 1
 category: HarmOni
@@ -11,99 +11,90 @@ related\_publications: false
 # Optional: power the gallery & grouped tech stack below
 
 screenshots:
+  - { path: /assets/img/projects/HarmOni/01.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/02.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/03.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/04.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/05.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/06.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/07.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/08.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/09.jpg, caption: "" }
+  - { path: /assets/img/projects/HarmOni/10.jpg, caption: "" }
 
-* { path: /assets/img/projects/HarmOni/01.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/02.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/03.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/04.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/05.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/06.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/07.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/08.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/09.jpg, caption: "" }
-* { path: /assets/img/projects/HarmOni/10.jpg, caption: "" }
---------------------
+**Overview**:
 
-**Overview**: 
+HarmOni is an all-in-one entertainment hub designed for desktop users. It allows you to host perfectly synchronized watch parties, manage a beautifully organized local media library, and discover new titles through a hybrid recommendation engine that learns your unique tastes. With a clean, focused interface and instant search, HarmOni delivers a seamless viewing experience.
 
-Meet HarmOni—your all-in-one entertainment hub. Host perfectly synced watch parties with friends, keep your local library beautifully organized, and discover titles you’ll actually love with a hybrid recommender that learns your taste. Enjoy smooth, low-friction playback, a clean, focused interface, and instant search that gets you from idea to play in seconds. Take control of movie and anime nights on your terms, on your desktop.
+**Roles & Responsibilities**:
 
-**Roles & responsibilities**
+- **System Architect & Backend Developer**: Designed the overall system architecture and developed the Flask-based backend services.
+- **Machine Learning Engineer**: Led the design, training, and evaluation of the hybrid recommendation model.
+- **Data Engineer**: Managed the data pipeline, including ingestion, cleaning, and schema normalization for all media metadata.
 
-* System architect and Back-End developer (Flask).
-* ML engineer for model training, hybrid design, and evaluation
-* Data engineering: ingestion, cleaning, and schema/metadata normalization
+**Key Features**:
 
-**Key features**
+- **Synchronized Viewing**: Real-time session controls (play, pause, seek) ensure seamless watch parties with friends.
+- **Smart Library**: Fast, faceted search and detailed metadata for both movies and anime.
+- **Personalized Recommendations**: A hybrid engine that blends content similarity, collaborative filtering (SVD), a popularity prior, and a recency boost.
+- **Modular Architecture**: An Electron/NestJS desktop shell communicates with a separate Flask recommendation service, enabling clean separation of concerns and rapid development.
+- **Recommendation Transparency**: Lightweight signals explain *why* a particular item was recommended, building user trust.
 
-* **Watch-together:** real-time session control (play/pause/seek) with seamless synchronization.
-* **Smart library:** fast search, faceted filters, and detailed metadata for movies and anime.
-* **Personalization:** hybrid ranking that blends content similarity, collaborative filtering (SVD), a popularity prior (IMDb-style weighted rating), and a gentle recency boost.
-* **Modular design:** Electron/NestJS desktop shell communicating with a Flask recommendation service for clean separation and rapid iteration.
-* **Transparency:** lightweight “why this” signals to explain each recommendation.
+**Tech Stack**:
 
-**Tech stack**:
-* **Languages:** TypeScript, Python.
-* **Desktop & UI:** Electron.
-* **Backend / APIs:** NestJS, Flask.
-* **ML / Data Science:** Pandas, scikit-learn, Surprise (SVD).
-* **Templating:** Jinja.
-* **Database:** MongoDB.
+- **Languages**: TypeScript, Python
+- **Desktop & UI**: Electron
+- **Backend & APIs**: NestJS, Flask
+- **ML & Data Science**: Pandas, scikit-learn, Surprise (SVD)
+- **Templating**: Jinja
+- **Database**: MongoDB
 
-**Methods of recommendation (at a glance)**:
+**Recommendation Methods**:
 
-* **Content-based**
-
-  * Movies: TF-IDF/Count over overview + tagline, cosine similarity.
-  * Anime: feature-weighted fusion across synopsis, genres, type, studios, episodes, source.
-* **Collaborative filtering**
-
-  * Matrix factorization via Surprise **SVD** for a robust accuracy/latency trade-off.
-* **Popularity prior**
-
-  * IMDb-style weighted rating to stabilize items with few votes.
-* **Recency**
-
-  * Gentle year-based boost to surface newer yet relevant titles.
-* **Hybrid blending**
-
-  * Weighted mix of CF + content + popularity + recency, increasing CF weight as users become active.
-* **Cold-start**
-
-  * Content + popularity + recency until enough interactions accumulate.
+- **Content-Based Filtering**:
+  - **Movies**: Calculated TF-IDF vectors from overviews and taglines to find cosine similarity.
+  - **Anime**: Fused weighted features, including synopsis, genres, studios, and source material.
+- **Collaborative Filtering**:
+  - Employed Singular Value Decomposition (SVD) for a robust balance of accuracy and latency.
+- **Popularity Prior**:
+  - Implemented an IMDb-style weighted rating to stabilize scores for items with few reviews.
+- **Recency Boost**:
+  - Applied a gentle, year-based boost to surface newer, relevant titles.
+- **Hybrid Engine**:
+  - Blended all signals—collaborative, content, popularity, and recency—with dynamic weighting that adapts to user activity.
+- **Cold-Start Handling**:
+  - Relied on content and popularity signals until enough user interaction data was collected for collaborative filtering.
 
 **Datasets**:
 
-* **Movies:** [TMDB](https://www.themoviedb.org/) metadata joined with [MovieLens](https://grouplens.org/datasets/movielens/) ratings.
-* **Anime:** [MyAnimeList](https://myanimelist.net/) datasets on [Kaggle](https://www.kaggle.com/) with rich metadata and user scores.
+- **Movies**: [TMDB](https://www.themoviedb.org/) metadata joined with [MovieLens](https://grouplens.org/datasets/movielens/) ratings.
+- **Anime**: [MyAnimeList](https://myanimelist.net/) datasets from [Kaggle](https://www.kaggle.com/), featuring rich metadata and user scores.
 
-**Evaluation & performance**
+**Evaluation & Performance**:
 
-* Offline validation with rating-error baselines plus planned ranking metrics for top-N quality.
-* Latency optimized via precomputed text vectors/cosine similarities and cached CF candidate lists, re-ranked on demand.
+- **Offline Validation**: Assessed performance using rating-prediction error metrics (e.g., RMSE, MAE) and planned top-N ranking evaluations (e.g., nDCG, MAP).
+- **Latency Optimization**: Minimized response times by pre-computing text vectors and item similarities, with on-demand re-ranking of cached candidate sets.
 
-**Architecture**
+**Architecture**:
 
-1. The Electron/NestJS UI authenticates the user and gathers context.
-2. It calls the Flask API with user/profile signals.
-3. The service blends **CF (SVD)** + **content similarity** + **IMDb-style rating** + **recency** into a final ranked list (cold-start handled by content/popularity).
-4. The UI renders top-N results and brief “why this” signals.
+1.  The **Electron/NestJS UI** authenticates the user and gathers context.
+2.  It calls the **Flask API** with user signals and profile information.
+3.  The service blends **SVD**, **content similarity**, a **weighted rating**, and **recency** into a final ranked list.
+4.  The UI renders the top N results with brief "why this" explanations.
 
-**Components**
+**Components**:
 
-* **UI:** Electron shell + NestJS backend-for-frontend.
-* **Recommender service:** Flask app.
-* **Storage:** MongoDB for user profiles, interactions, and cached artifacts.
+- **UI**: Electron shell with a NestJS backend-for-frontend.
+- **Recommender Service**: Flask application.
+- **Storage**: MongoDB for user profiles, interactions, and cached model artifacts.
 
+**Links**:
 
-**Links**
-
-* Project demo: [https://youtu.be/ZzxAlox9lGQ](https://youtu.be/ZzxAlox9lGQ).
-
+- **Project Demo**: [https://youtu.be/ZzxAlox9lGQ](https://youtu.be/ZzxAlox9lGQ)
 ---
 
 <!-- Responsive 10-screenshot gallery -->
-
+<!-- markdownlint-disable MD033 -->
 <h3 id="gallery">Screenshots</h3>
 
 <div class="screenshot-grid">
