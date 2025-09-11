@@ -35,18 +35,20 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-harmoni",
+          section: "News",},{id: "news-graduated-top-of-my-cohort-bachelor-s-in-computer-science",
+          title: 'Graduated Top of My Cohort (Bachelor’s in Computer Science)',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-started-serving-as-a-teaching-assistant",
+          title: 'Started serving as a Teaching Assistant',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_1/";
+            },},{id: "projects-harmoni",
           title: 'HarmOni',
           description: "All-in-one synchronized viewing, local media library, and hybrid recommendations.",
           section: "Projects",handler: () => {
