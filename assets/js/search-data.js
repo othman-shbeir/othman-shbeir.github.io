@@ -35,10 +35,12 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-completed-24-hour-ai-training-ieee-iug",
+          title: 'Completed 24-Hour AI Training (IEEE–IUG)',
           description: "",
-          section: "News",},{id: "news-graduated-top-of-my-cohort-bachelor-s-in-computer-science",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_3/";
+            },},{id: "news-graduated-top-of-my-cohort-bachelor-s-in-computer-science",
           title: 'Graduated Top of My Cohort (Bachelor’s in Computer Science)',
           description: "",
           section: "News",handler: () => {
