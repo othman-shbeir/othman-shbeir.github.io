@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: 
+description:
 nav: true
 nav_order: 3
-display_categories: [HarmOni,work,fun]
+display_categories: [AI, work, fun]
 horizontal: false
 ---
 
