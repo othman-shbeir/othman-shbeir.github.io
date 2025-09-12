@@ -1,81 +1,63 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: Movies Hybrid Recommendation System
+description: Content + CF hybrid with IMDb-weighted rating and a recency boost, tested on larger MovieLens metadata.
+img: /assets/img/projects/recsys.jpg
+importance: 1
+category: AI
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Overview.** A two-part project that builds a movie recommender from the ground up.  
+**Part 1** crafts a solid **content-based** system on TMDB (genres, keywords, cast/crew, overview) using TF-IDF/CountVectorizer and **cosine similarity**.  
+**Part 2** upgrades to an **improved hybrid**: blends **Surprise SVD** (collaborative filtering) with **IMDb-style weighted rating** and a light **recency boost**, then validates on the larger **MovieLens** metadata.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Key features**
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- **Content similarity:** create a unified “movie soup” (genres, keywords, cast, crew, overview) → TF-IDF / CountVectorizer → cosine similarity for fast top-N retrieval.
+- **Personalization (CF):** user-aware scoring with **SVD** (from [scikit-surprise](https://surpriselib.com/)) using historical ratings.
+- **Popularity prior:** IMDb-style **weighted rating** (WR) to avoid small-vote bias (uses corpus mean `C` and 65th-percentile `m`).
+- **Recency boost:** scale release year to `[0,1]` and blend with a tunable `recency_weight` (e.g., `0.2`) to gently favor newer titles.
+- **Cold-start handling:** for brand-new users, fall back to **content + popularity**; for known users, blend in SVD predictions (weight increases with user activity).
+- **Explainability:** expose partial scores (similarity, popularity, recency, SVD) to show “why this recommendation”.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+**Tech stack**  
+Python, **Pandas**, **NumPy**, **scikit-learn** ([TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction), [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)), **scikit-surprise** ([SVD](https://surpriselib.com/)), Matplotlib
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+**Architecture (simplified)**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+1. **Preprocess content** (TMDB): clean text; build a **soup** from genres/keywords/cast/crew/overview; vectorize with **TF-IDF / CountVectorizer**.
+2. **Compute similarity**: precompute **cosine similarity** matrix for fast lookups.
+3. **Get candidates**: for a seed title, fetch top-K similar movies (exclude itself).
+4. **Score candidates** with:
+   - **IMDb weighted rating** (mean `C`, vote threshold `m` at ~65th percentile).
+   - **Similarity score** (from cosine).
+   - **Recency score** (scaled release year).
+   - **SVD prediction** (if user is known; else skip).
+5. **Hybrid blend**: `final_score = α·similarity + β·weighted_rating + γ·recency + δ·svd_pred`  
+   (typical starting point: `α=0.55–0.65`, `β≈0.20`, `γ≈0.10–0.20`, `δ` grows with user history).
+6. **Return Top-N** with brief “why” signals (e.g., “similar to _Inception_; strong votes; recent”).
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+**Datasets**
 
-{% raw %}
+- **TMDB 5000 Movies & Credits** (Part 1): titles, overviews, genres, keywords, cast/crew.  
+  Sources: [TMDB](https://www.themoviedb.org/) · Kaggle mirrors (e.g., _tmdb_5000_movies.csv_, _tmdb_5000_credits.csv_).
+- **MovieLens (latest / 25M metadata)** (Part 2): ratings + rich metadata; uses **`links.csv`** to map **TMDb** IDs ↔ **MovieLens** IDs.  
+  Source: [GroupLens MovieLens](https://grouplens.org/datasets/movielens/).
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+**Project parts**
 
-{% endraw %}
+- **Part 1 — Content-Based on TMDB:**  
+  Build the “soup,” compute cosine similarity, and rank similar titles.  
+  _Notebook:_ [TMDB_RecommenderSystem.ipynb](/assets/notebooks/TMDB_RecommenderSystem.ipynb)  
+  _Docs:_ [TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) · [Cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) · [TMDB](https://www.themoviedb.org/)
+- **Part 2 — Improved Hybrid on MovieLens:**  
+  Add **IMDb-weighted rating**, **recency boost**, and **Surprise SVD**; handle cold-start and blend scores into a final rank; validate on a larger corpus.  
+  _Notebook:_ [Testing_The_Improved_Hybrid_Recoomendation_System.ipynb](/assets/notebooks/Testing_The_Improved_Hybrid_Recoomendation_System.ipynb)  
+  _Docs:_ [scikit-surprise SVD](https://surpriselib.com/) · [MovieLens dataset](https://grouplens.org/datasets/movielens/)
+
+**Links**
+
+- **Datasets:** [TMDB](https://www.themoviedb.org/) · [MovieLens](https://grouplens.org/datasets/movielens/)
+- **Libraries:** [scikit-learn](https://scikit-learn.org/stable/) · [scikit-surprise](https://surpriselib.com/)
+- **Notebooks:** [Part 1](/assets/notebooks/TMDB_RecommenderSystem.ipynb) · [Part 2](/assets/notebooks/Testing_The_Improved_Hybrid_Recoomendation_System.ipynb)

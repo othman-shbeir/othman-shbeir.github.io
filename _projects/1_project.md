@@ -4,7 +4,7 @@ title: HarmOni
 description: All-in-one synchronized viewing, local media library, and hybrid recommendations.
 img: /assets/img/projects/13.jpg
 importance: 1
-category: HarmOni
+category: AI
 related_publications: false
 ---
 
