@@ -1,80 +1,43 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: AI-Driven Student Success Forecaster
+description: Hackathon project (Udacity Palestine Launchpad). Predicts student outcomes and flags at-risk students with an explainable ML pipeline and a Flask web app.
+img: /assets/img/projects/student-forecaster.jpg
+importance: 1
+category: Data Science
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### **Overview.**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Built during the **Udacity Palestine Launchpad Hackathon**, our team delivered an AI web app that forecasts student performance and surfaces early-warning insights for educators. We placed **6th overall** with one of the **highest accuracies on the Kaggle leaderboard** used for judging. The app is deployable and accessible via a simple browser UI.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### **Key features**
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **End-to-end pipeline:** data cleaning, feature engineering, train/validation split, and model selection with cross-validation.
+- **Explainability:** feature importance and per-prediction rationale to support interventions.
+- **Web app:** lightweight **Flask** interface for single-student form inputs and batch CSV scoring.
+- **Production artifacts:** serialized model and preprocessing pipeline for reproducible results.
+- **Team delivery:** clear repo structure, demo screenshots, and setup instructions for evaluators.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### **Tech stack**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Python, **Pandas**, **NumPy**, **scikit-learn**, **Flask**, Jupyter, joblib, Matplotlib
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### **Architecture (simplified)**
 
-{% raw %}
+1. **Ingest & clean:** validate ranges, impute missing values, encode categoricals, scale numerics.
+2. **Modeling:** try several scikit-learn baselines; pick the best via **cross-validation** (RMSE/MAE/Accuracy depending on task).
+3. **Export:** persist the fitted model + preprocessing with **joblib**.
+4. **Serve:** Flask app loads artifacts at startup and exposes **predict** endpoints plus a browser form.
+5. **Evaluate:** track leaderboard score (Kaggle) and compare iterations to improve generalization.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### **Dataset**
 
-{% endraw %}
+Tabular **student performance** data provided for the hackathon (features such as demographics/attendance/engagement where available). The code expects a CSV schema matching the training set and validates inputs before scoring.
+
+### **Links**
+
+- **Code repository:** [Students_grade_forcasting (GitHub)](https://github.com/othman-shbeir/Students_grade_forcasting/tree/master)
+- **Live demo:** [Student Success Forecaster Web App](https://oshbeir.pythonanywhere.com/)
+- **Udacity:** [Udacity](https://www.udacity.com/) · **Kaggle:** [Kaggle](https://www.kaggle.com/)
