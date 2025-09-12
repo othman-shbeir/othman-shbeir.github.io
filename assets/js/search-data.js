@@ -60,9 +60,9 @@ ninja.data = [{
           description: "Content + CF hybrid with IMDb-weighted rating and a recency boost, tested on larger MovieLens metadata.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-anime-hybrid-recommendation-system",
+          title: 'Anime Hybrid Recommendation System',
+          description: "Content + collaborative filtering on MyAnimeList (2023) data with TF-IDF cosine similarity and Surprise SVD/NMF/KNN—tuned via cross-validation and grid search.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
