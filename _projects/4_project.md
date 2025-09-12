@@ -22,7 +22,14 @@ Built during the **Udacity Palestine Launchpad Hackathon**, our team delivered a
 
 ### **Tech stack**
 
-Python, **Pandas**, **NumPy**, **scikit-learn**, **Flask**, Jupyter, joblib, Matplotlib
+- Python
+- Pandas
+- NumPy
+- scikit-learn
+- Flask
+- Jupyter
+- joblib
+- Matplotlib
 
 ### **Architecture (simplified)**
 
