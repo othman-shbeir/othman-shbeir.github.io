@@ -1,81 +1,56 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
-category: work
+title: Anime Hybrid Recommendation System
+description: Content + collaborative filtering on MyAnimeList (2023) data with TF-IDF cosine similarity and Surprise SVD/NMF/KNN—tuned via cross-validation and grid search.
+img: /assets/img/projects/anime-recsys.jpg
+importance: 1
+category: AI
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Overview.** A two-part **Anime recommendation system** built on **MyAnimeList (MAL)** data.  
+**Part 1** assembles a strong **content-based** engine using genres, studios, type, source, episodes, rating class, and synopsis text (TF-IDF + **cosine similarity**).  
+**Part 2** adds **collaborative filtering** with **Surprise** models (**SVD**, **NMF**, **KNNBasic**), evaluates via **cross-validation** (RMSE/MAE), performs **GridSearchCV** hyperparameter tuning, and persists the best model.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Key features**
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- **Content similarity:** Build a feature “soup” from **genres**, **studios**, **type**, **source**, **episodes**, **rating** (e.g., PG-13), and **synopsis** → vectorize with [TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) → rank with [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html).
+- **NLP cleanup:** Tokenization/lemmatization using [spaCy](https://spacy.io/) for cleaner synopsis signals.
+- **Collaborative filtering:** Train/evaluate [Surprise](https://surpriselib.com/) **SVD**, **NMF**, and **KNNBasic** on user–anime ratings.
+- **Model selection & tuning:** Compare **RMSE/MAE** across models via `cross_validate`; refine **SVD** with [GridSearchCV](https://surpriselib.com/#model_selection) and save the best estimator.
+- **Hybrid scoring:** Blend content similarity with CF predictions; fall back to content-only for cold-start users.
+- **Explainability:** Surface partial scores (similarity vs. CF) so users see _why_ a title is recommended.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+**Tech stack**  
+Python, **Pandas**, **NumPy**, [scikit-learn](https://scikit-learn.org/stable/) (TF-IDF, preprocessing, cosine), [spaCy](https://spacy.io/), [scikit-surprise](https://surpriselib.com/) (SVD/NMF/KNNBasic, Dataset/Reader, CV & GridSearch), Matplotlib
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+**Architecture (simplified)**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+1. **Ingest & clean** MAL data; normalize key categorical fields and prepare the **ratings** matrix.
+2. **Content pipeline:** build the “soup” → **TF-IDF** → precompute **cosine similarity** for fast nearest-neighbour lookup.
+3. **CF pipeline:** load ratings → train **SVD/NMF/KNNBasic** → **cross-validate** → **grid search** SVD → **persist** best model.
+4. **Hybrid rank:** for a seed title or known user, combine content score + CF prediction; return Top-N with brief _why-this_ cues.
+5. **Cold start:** if no user history, rely on content similarity (optionally mix in MAL mean score as a popularity prior).
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+**Datasets**
 
-{% raw %}
+- **Anime metadata (2023):** fields like `anime_id`, name, **genres**, **studios**, **type**, **source**, **episodes**, **rating**, **score**, \*\*synopsis`.  
+  Sources: [MyAnimeList](https://myanimelist.net/) · [Kaggle (Anime datasets)](https://www.kaggle.com/datasets)
+- **User ratings:** `users-score-2023.csv` (MAL user–anime scores) used to train and evaluate the CF models.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+**Project parts**
 
-{% endraw %}
+- **Part 1 — Content-Based Recommender (MAL 2023):**  
+  Build the text/metadata “soup,” compute TF-IDF vectors, and use cosine similarity for nearest titles.  
+  _Notebook:_ [AnimeRecommender101.ipynb](/assets/notebooks/AnimeRecommender101.ipynb)  
+  _Docs:_ [TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) · [Cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) · [spaCy](https://spacy.io/)
+- **Part 2 — Collaborative + Hybrid (Surprise):**  
+  Train **SVD/NMF/KNNBasic**, compare **RMSE/MAE**, run **GridSearchCV** for SVD, persist the best, and blend with content scores for final ranking.  
+  _Notebook:_ [Collaborative_Anime_Recommendation_System.ipynb](/assets/notebooks/Collaborative_Anime_Recommendation_System.ipynb)  
+  _Docs:_ [scikit-surprise](https://surpriselib.com/) · [Dataset/Reader](https://surpriselib.com/#load_data) · [GridSearchCV](https://surpriselib.com/#model_selection)
+
+**Links**
+
+- **Datasets:** [MyAnimeList](https://myanimelist.net/) · [Kaggle (Anime datasets)](https://www.kaggle.com/datasets)
+- **Libraries:** [scikit-learn](https://scikit-learn.org/stable/) · [spaCy](https://spacy.io/) · [scikit-surprise](https://surpriselib.com/)
+- **Notebooks:** [Part 1](/assets/notebooks/AnimeRecommender101.ipynb) · [Part 2](/assets/notebooks/Collaborative_Anime_Recommendation_System.ipynb)
