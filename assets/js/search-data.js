@@ -55,9 +55,9 @@ ninja.data = [{
           description: "All-in-one synchronized viewing, local media library, and hybrid recommendations.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-movies-hybrid-recommendation-system",
+          title: 'Movies Hybrid Recommendation System',
+          description: "Content + CF hybrid with IMDb-weighted rating and a recency boost, tested on larger MovieLens metadata.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
