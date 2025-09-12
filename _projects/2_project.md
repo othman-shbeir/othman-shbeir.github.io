@@ -8,11 +8,14 @@ category: AI
 related_publications: false
 ---
 
-**Overview.** A two-part project that builds a movie recommender from the ground up.  
-**Part 1** crafts a solid **content-based** system on TMDB (genres, keywords, cast/crew, overview) using TF-IDF/CountVectorizer and **cosine similarity**.  
-**Part 2** upgrades to an **improved hybrid**: blends **Surprise SVD** (collaborative filtering) with **IMDb-style weighted rating** and a light **recency boost**, then validates on the larger **MovieLens** metadata.
+### **Overview.**
 
-**Key features**
+A two-part project that builds a movie recommender from the ground up.
+
+- **Part 1**: crafts a solid **content-based** system on TMDB (genres, keywords, cast/crew, overview) using TF-IDF/CountVectorizer and **cosine similarity**.
+- **Part 2** upgrades to an **improved hybrid**: blends **Surprise SVD** (collaborative filtering) with **IMDb-style weighted rating** and a light **recency boost**, then validates on the larger **MovieLens** metadata.
+
+### **Key features**
 
 - **Content similarity:** create a unified “movie soup” (genres, keywords, cast, crew, overview) → TF-IDF / CountVectorizer → cosine similarity for fast top-N retrieval.
 - **Personalization (CF):** user-aware scoring with **SVD** (from [scikit-surprise](https://surpriselib.com/)) using historical ratings.
@@ -21,10 +24,11 @@ related_publications: false
 - **Cold-start handling:** for brand-new users, fall back to **content + popularity**; for known users, blend in SVD predictions (weight increases with user activity).
 - **Explainability:** expose partial scores (similarity, popularity, recency, SVD) to show “why this recommendation”.
 
-**Tech stack**  
+### **Tech stack**
+
 Python, **Pandas**, **NumPy**, **scikit-learn** ([TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction), [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)), **scikit-surprise** ([SVD](https://surpriselib.com/)), Matplotlib
 
-**Architecture (simplified)**
+### **Architecture (simplified)**
 
 1. **Preprocess content** (TMDB): clean text; build a **soup** from genres/keywords/cast/crew/overview; vectorize with **TF-IDF / CountVectorizer**.
 2. **Compute similarity**: precompute **cosine similarity** matrix for fast lookups.
@@ -38,14 +42,14 @@ Python, **Pandas**, **NumPy**, **scikit-learn** ([TF-IDF](https://scikit-learn.o
    (typical starting point: `α=0.55–0.65`, `β≈0.20`, `γ≈0.10–0.20`, `δ` grows with user history).
 6. **Return Top-N** with brief “why” signals (e.g., “similar to _Inception_; strong votes; recent”).
 
-**Datasets**
+### **Datasets**
 
 - **TMDB 5000 Movies & Credits** (Part 1): titles, overviews, genres, keywords, cast/crew.  
   Sources: [TMDB](https://www.themoviedb.org/) · Kaggle mirrors (e.g., _tmdb_5000_movies.csv_, _tmdb_5000_credits.csv_).
 - **MovieLens (latest / 25M metadata)** (Part 2): ratings + rich metadata; uses **`links.csv`** to map **TMDb** IDs ↔ **MovieLens** IDs.  
   Source: [GroupLens MovieLens](https://grouplens.org/datasets/movielens/).
 
-**Project parts**
+### **Project parts**
 
 - **Part 1 — Content-Based on TMDB:**  
   Build the “soup,” compute cosine similarity, and rank similar titles.  
@@ -56,7 +60,7 @@ Python, **Pandas**, **NumPy**, **scikit-learn** ([TF-IDF](https://scikit-learn.o
   _Notebook:_ [Testing_The_Improved_Hybrid_Recoomendation_System.ipynb](/assets/notebooks/Testing_The_Improved_Hybrid_Recoomendation_System.ipynb)  
   _Docs:_ [scikit-surprise SVD](https://surpriselib.com/) · [MovieLens dataset](https://grouplens.org/datasets/movielens/)
 
-**Links**
+### **Links**
 
 - **Datasets:** [TMDB](https://www.themoviedb.org/) · [MovieLens](https://grouplens.org/datasets/movielens/)
 - **Libraries:** [scikit-learn](https://scikit-learn.org/stable/) · [scikit-surprise](https://surpriselib.com/)

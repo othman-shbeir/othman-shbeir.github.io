@@ -8,11 +8,14 @@ category: AI
 related_publications: false
 ---
 
-**Overview.** A two-part **Anime recommendation system** built on **MyAnimeList (MAL)** data.  
-**Part 1** assembles a strong **content-based** engine using genres, studios, type, source, episodes, rating class, and synopsis text (TF-IDF + **cosine similarity**).  
-**Part 2** adds **collaborative filtering** with **Surprise** models (**SVD**, **NMF**, **KNNBasic**), evaluates via **cross-validation** (RMSE/MAE), performs **GridSearchCV** hyperparameter tuning, and persists the best model.
+### **Overview.**
 
-**Key features**
+A two-part **Anime recommendation system** built on **MyAnimeList (MAL)** data.
+
+- **Part 1** assembles a strong **content-based** engine using genres, studios, type, source, episodes, rating class, and synopsis text (TF-IDF + **cosine similarity**).
+- **Part 2** adds **collaborative filtering** with **Surprise** models (**SVD**, **NMF**, **KNNBasic**), evaluates via **cross-validation** (RMSE/MAE), performs **GridSearchCV** hyperparameter tuning, and persists the best model.
+
+### **Key features**
 
 - **Content similarity:** Build a feature “soup” from **genres**, **studios**, **type**, **source**, **episodes**, **rating** (e.g., PG-13), and **synopsis** → vectorize with [TF-IDF](https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction) → rank with [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html).
 - **NLP cleanup:** Tokenization/lemmatization using [spaCy](https://spacy.io/) for cleaner synopsis signals.
@@ -21,10 +24,11 @@ related_publications: false
 - **Hybrid scoring:** Blend content similarity with CF predictions; fall back to content-only for cold-start users.
 - **Explainability:** Surface partial scores (similarity vs. CF) so users see _why_ a title is recommended.
 
-**Tech stack**  
+### **Tech stack**
+
 Python, **Pandas**, **NumPy**, [scikit-learn](https://scikit-learn.org/stable/) (TF-IDF, preprocessing, cosine), [spaCy](https://spacy.io/), [scikit-surprise](https://surpriselib.com/) (SVD/NMF/KNNBasic, Dataset/Reader, CV & GridSearch), Matplotlib
 
-**Architecture (simplified)**
+### **Architecture (simplified)**
 
 1. **Ingest & clean** MAL data; normalize key categorical fields and prepare the **ratings** matrix.
 2. **Content pipeline:** build the “soup” → **TF-IDF** → precompute **cosine similarity** for fast nearest-neighbour lookup.
@@ -32,13 +36,13 @@ Python, **Pandas**, **NumPy**, [scikit-learn](https://scikit-learn.org/stable/) 
 4. **Hybrid rank:** for a seed title or known user, combine content score + CF prediction; return Top-N with brief _why-this_ cues.
 5. **Cold start:** if no user history, rely on content similarity (optionally mix in MAL mean score as a popularity prior).
 
-**Datasets**
+### **Datasets**
 
 - **Anime metadata (2023):** fields like `anime_id`, name, **genres**, **studios**, **type**, **source**, **episodes**, **rating**, **score**, \*\*synopsis`.  
   Sources: [MyAnimeList](https://myanimelist.net/) · [Kaggle (Anime datasets)](https://www.kaggle.com/datasets)
 - **User ratings:** `users-score-2023.csv` (MAL user–anime scores) used to train and evaluate the CF models.
 
-**Project parts**
+### **Project parts**
 
 - **Part 1 — Content-Based Recommender (MAL 2023):**  
   Build the text/metadata “soup,” compute TF-IDF vectors, and use cosine similarity for nearest titles.  
@@ -49,7 +53,7 @@ Python, **Pandas**, **NumPy**, [scikit-learn](https://scikit-learn.org/stable/) 
   _Notebook:_ [Collaborative_Anime_Recommendation_System.ipynb](/assets/notebooks/Collaborative_Anime_Recommendation_System.ipynb)  
   _Docs:_ [scikit-surprise](https://surpriselib.com/) · [Dataset/Reader](https://surpriselib.com/#load_data) · [GridSearchCV](https://surpriselib.com/#model_selection)
 
-**Links**
+### **Links**
 
 - **Datasets:** [MyAnimeList](https://myanimelist.net/) · [Kaggle (Anime datasets)](https://www.kaggle.com/datasets)
 - **Libraries:** [scikit-learn](https://scikit-learn.org/stable/) · [spaCy](https://spacy.io/) · [scikit-surprise](https://surpriselib.com/)
