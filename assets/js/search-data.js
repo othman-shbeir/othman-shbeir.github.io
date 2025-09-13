@@ -80,19 +80,19 @@ ninja.data = [{
           description: "SQL-driven insights into customer behavior, rentals, and store performance on the Sakila/DVD Rental sample DB—completed for Udacity’s Programming for Data Science Nanodegree.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-news-website-angular-15",
-          title: 'News Website (Angular 15)',
+            },},{id: "projects-news-website",
+          title: 'News Website',
           description: "A responsive Angular single-page app that aggregates live headlines and topic feeds from a configurable news API—generated with Angular CLI 15.1.5.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+            },},{id: "projects-netflix-clone",
+          title: 'Netflix Clone',
+          description: "A responsive Angular single-page app that emulates a Netflix-style browsing experience with modular components, routing, and a clean service-driven architecture—generated with Angular CLI 15.1.5.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+            },},{id: "projects-personal-expenses-api",
+          title: 'Personal Expenses API',
+          description: "Secure REST API for tracking expenses, incomes, and monthly insights—JWT auth, input validation, and a clean controller/route structure.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
