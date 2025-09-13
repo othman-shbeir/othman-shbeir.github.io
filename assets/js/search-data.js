@@ -80,9 +80,9 @@ ninja.data = [{
           description: "SQL-driven insights into customer behavior, rentals, and store performance on the Sakila/DVD Rental sample DB—completed for Udacity’s Programming for Data Science Nanodegree.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-news-website-angular-15",
+          title: 'News Website (Angular 15)',
+          description: "A responsive Angular single-page app that aggregates live headlines and topic feeds from a configurable news API—generated with Angular CLI 15.1.5.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-project-8",
