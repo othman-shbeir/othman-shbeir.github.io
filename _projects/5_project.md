@@ -1,80 +1,45 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: US Bikeshare Data Analysis
+description: Built for the Udacity–Google Palestine Launchpad Data Science Nanodegree (PDSND). Interactive terminal app for exploring Chicago, NYC, and Washington bikeshare data with flexible time filters and rich stats.
+img: /assets/img/projects/bikeshare-cli.jpg
+importance: 1
+category: Data Science
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### **Overview.**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Developed as part of the **Udacity–Google Palestine Launchpad Data Science Nanodegree (PDSND)**, this command-line app analyzes **US bikeshare** data for **Chicago**, **New York City**, and **Washington**. Users choose a city and optional **time filters** (month/day/both/none), then the program prints concise insights: busiest times, popular stations and routes, trip durations, and user demographics—plus an optional raw-rows viewer for quick audits.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### **Key features**
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **Interactive filters:** guided prompts with validation for **city**, **month**, **day**, or **both** (or **none** to view all data).
+- **Time stats:** most common **month**, **day of week**, and **start hour** for trips.
+- **Station stats:** top **Start Station**, **End Station**, and most frequent **Start → End** route.
+- **Trip stats:** **total** and **mean** travel time (human-readable via `convert_seconds()`).
+- **User stats:** counts by **User Type** and, when available, **Gender** and **Birth Year** summaries.
+- **Raw data viewer:** opt-in batches of **5 rows** using a CSV streaming helper.
+- **Extra utility:** `get_most_common_season(city)` infers the busiest **season** from monthly usage.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### **Tech stack**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Python, **Pandas**, **NumPy**, [csv (stdlib)](https://docs.python.org/3/library/csv.html), time module
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### **Architecture (simplified)**
 
-{% raw %}
+1. **Ingest:** load the selected city CSV into a DataFrame; parse `Start Time` to `datetime`.
+2. **Feature derivation:** add `month`, `day_of_week`, and `hour` features.
+3. **Filtering:** subset the DataFrame by chosen **month** and/or **day**.
+4. **Computation:**
+   - **Time stats** via `mode()` on `month`, `day_of_week`, and `hour`.
+   - **Station stats** including a composed `Start Station + " To " + End Station` route key.
+   - **Trip duration** via `sum()` and `mean()`; humanize with `convert_seconds()`.
+   - **User stats** via `value_counts()` with defensive checks for optional columns.
+5. **Inspection (optional):** stream raw rows in groups of 5 using `DictReader.csv`.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### **Links**
 
-{% endraw %}
+- **Code repository:** [pdsnd_github (GitHub)](https://github.com/othman-shbeir/pdsnd_github)
+- **Program:** [Udacity – Data Science Nanodegree](https://www.udacity.com/)
+- **Libraries:** [Pandas](https://pandas.pydata.org/) · [NumPy](https://numpy.org/) · [csv](https://docs.python.org/3/library/csv.html)
