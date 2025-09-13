@@ -1,6 +1,6 @@
 ---
 layout: page
-title: News Website (Angular 15)
+title: News Website
 description: A responsive Angular single-page app that aggregates live headlines and topic feeds from a configurable news API—generated with Angular CLI 15.1.5.
 img: /assets/img/projects/news-site.jpg
 importance: 1
