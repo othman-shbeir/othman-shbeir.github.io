@@ -5,7 +5,7 @@ permalink: /projects/
 description:
 nav: true
 nav_order: 3
-display_categories: [AI, Data Science, work, fun]
+display_categories: [AI, Data Science, Web Apps, work, fun]
 horizontal: false
 ---
 
