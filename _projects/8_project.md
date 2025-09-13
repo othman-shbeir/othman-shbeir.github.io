@@ -1,81 +1,43 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: Netflix Clone
+description: A responsive Angular single-page app that emulates a Netflix-style browsing experience with modular components, routing, and a clean service-driven architecture—generated with Angular CLI 15.1.5.
+img: /assets/img/projects/netflix-clone-angular.jpg
+importance: 1
+category: Web Apps
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### **Overview.**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+A modern **Angular** application scaffolded with **Angular CLI 15.1.5** that replicates a Netflix-like UI: hero banner, horizontal carousels/rows, title cards, and detail views. The codebase is organized around reusable components and a central data service, ready to plug into a movie/TV metadata API (e.g., TMDB) via environment configuration.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### **Key features**
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **Clean UI structure:** app shell with header/nav, **hero section**, and multiple horizontal content rows (cards).
+- **Routing UX:** route-driven navigation for lists and detail pages (Angular Router).
+- **Service-first data flow:** a dedicated service for all HTTP calls; environment-based API base URL/key (drop-in with your provider).
+- **Resilience:** loading/empty states and basic error messaging patterns.
+- **Responsive layout:** mobile-first cards and grids that scale smoothly from phone to desktop.
+- **Extensible:** room for search, favorites/watchlist, and pagination or infinite scroll.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### **Tech stack**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Angular 15** (Angular CLI), **TypeScript**, **HTML**, **CSS** (repo breakdown ~TS 55%, HTML 39%, CSS 6%).
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### **Architecture (simplified)**
 
-{% raw %}
+1. **Components:** `App` shell + `Header/Nav`, `Hero`, `Row/List`, `Card`, `Details`.
+2. **Service layer:** a `MovieService` (HttpClient) centralizes fetching; swap in any provider by changing environment configuration.
+3. **Routing:** routes map to home/categories and detail pages; params drive the selected item.
+4. **State/UI:** lean RxJS streams for loading/errors; dumb/presentational cards for performance and reuse.
+5. **Styling:** utility CSS for grids/rows; card hover/transition effects.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### **Dataset**
 
-{% endraw %}
+The app is **API-agnostic** by default and is intended to consume a third-party **movie/TV REST API** (e.g., TMDB) for titles, images, and metadata. Add your API key to the Angular environment file and point the service to the provider’s endpoints.
+
+### **Links**
+
+- **Code repository:** [netflix-clone-Angular (GitHub)](https://github.com/othman-shbeir/netflix-clone-Angular).
+- **Angular CLI:** [Overview & Command Reference](https://angular.io/cli).
