@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Linear Regression (AI Course with Dr. Rowanda Ahmed)
+title: House Price Prediction Project
 description: From-scratch and scikit-learn linear regression in a clear, didactic notebook—cost functions, gradient descent intuition, model fit, and basic evaluation.
 img: /assets/img/projects/linear-regression.jpg
 importance: 3
