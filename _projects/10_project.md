@@ -3,7 +3,7 @@ layout: page
 title: MNIST CNN Classifier (99.5%+)
 description: Compact Keras/TensorFlow convolutional network for handwritten digit recognition—reaching ~99.5% test accuracy on MNIST with a clean training/evaluation pipeline.
 img: /assets/img/projects/mnist-cnn.jpg
-importance: 1
+importance: 3
 category: AI
 related_publications: false
 ---
