@@ -55,11 +55,6 @@ ninja.data = [{
           description: "Compact Keras/TensorFlow convolutional network for handwritten digit recognition—reaching ~99.5% test accuracy on MNIST with a clean training/evaluation pipeline.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
-            },},{id: "projects-house-price-prediction-project",
-          title: 'House Price Prediction Project',
-          description: "From-scratch and scikit-learn linear regression in a clear, didactic notebook—cost functions, gradient descent intuition, model fit, and basic evaluation.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/11_project/";
             },},{id: "projects-harmoni",
           title: 'HarmOni',
           description: "All-in-one synchronized viewing, local media library, and hybrid recommendations.",
