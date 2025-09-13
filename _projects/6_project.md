@@ -8,7 +8,9 @@ category: Data Science
 related_publications: false
 ---
 
-### **Overview.** A focused SQL project exploring the **Sakila / DVD Rental** database to understand **movie-watching patterns**, **payment earnings**, and **store performance**. Deliverables include a set of reproducible queries and a concise visual **report**. Built as part of Udacity’s **Programming for Data Science Nanodegree**. :contentReference[oaicite:0]{index=0}
+### **Overview.**
+
+A focused SQL project exploring the **Sakila / DVD Rental** database to understand **movie-watching patterns**, **payment earnings**, and **store performance**. Deliverables include a set of reproducible queries and a concise visual **report**. Built as part of Udacity’s **Programming for Data Science Nanodegree**. :contentReference[oaicite:0]{index=0}
 
 ### **Key features**
 
