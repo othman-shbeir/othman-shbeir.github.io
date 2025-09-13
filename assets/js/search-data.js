@@ -50,6 +50,16 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
+            },},{id: "projects-mnist-cnn-classifier-99-5",
+          title: 'MNIST CNN Classifier (99.5%+)',
+          description: "Compact Keras/TensorFlow convolutional network for handwritten digit recognition—reaching ~99.5% test accuracy on MNIST with a clean training/evaluation pipeline.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-linear-regression-ai-course-with-dr-rowanda-ahmed",
+          title: 'Linear Regression (AI Course with Dr. Rowanda Ahmed)',
+          description: "From-scratch and scikit-learn linear regression in a clear, didactic notebook—cost functions, gradient descent intuition, model fit, and basic evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
             },},{id: "projects-harmoni",
           title: 'HarmOni',
           description: "All-in-one synchronized viewing, local media library, and hybrid recommendations.",
