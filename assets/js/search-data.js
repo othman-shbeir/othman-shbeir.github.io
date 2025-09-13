@@ -75,9 +75,9 @@ ninja.data = [{
           description: "Built for the Udacity–Google Palestine Launchpad Data Science Nanodegree (PDSND). Interactive terminal app for exploring Chicago, NYC, and Washington bikeshare data with flexible time filters and rich stats.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-sakila-dvd-rental-data-analysis-postgresql",
+          title: 'Sakila DVD Rental Data Analysis (PostgreSQL)',
+          description: "SQL-driven insights into customer behavior, rentals, and store performance on the Sakila/DVD Rental sample DB—completed for Udacity’s Programming for Data Science Nanodegree.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "projects-project-7",
