@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Personal Expenses API (Node.js + MongoDB)
+title: Personal Expenses API
 description: Secure REST API for tracking expenses, incomes, and monthly insights—JWT auth, input validation, and a clean controller/route structure.
 img: /assets/img/projects/personal-expenses-api.jpg
 importance: 1
-category: Backend APIs
+category: Web Apps
 related_publications: false
 ---
 
