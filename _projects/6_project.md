@@ -1,80 +1,38 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: Sakila DVD Rental Data Analysis (PostgreSQL)
+description: SQL-driven insights into customer behavior, rentals, and store performance on the Sakila/DVD Rental sample DB—completed for Udacity’s Programming for Data Science Nanodegree.
+img: /assets/img/projects/sakila.jpg
+importance: 1
+category: Data Science
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### **Overview.** A focused SQL project exploring the **Sakila / DVD Rental** database to understand **movie-watching patterns**, **payment earnings**, and **store performance**. Deliverables include a set of reproducible queries and a concise visual **report**. Built as part of Udacity’s **Programming for Data Science Nanodegree**. :contentReference[oaicite:0]{index=0}
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### **Key features**
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- **Targeted questions → queries:** film-category viewing patterns; **family movies** split into **rental-duration quartiles**; category counts by duration bucket; store throughput & order-fulfillment metrics (see `queries.txt`). :contentReference[oaicite:1]{index=1}
+- **Clear outputs:** charts/tables packaged in a compact **PDF report** (`report.pdf`). :contentReference[oaicite:2]{index=2}
+- **Portable setup:** uses the widely known **Sakila/DVD Rental** sample schema; easy to load on local PostgreSQL. :contentReference[oaicite:3]{index=3}
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+### **Tech stack**
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+PostgreSQL, SQL, pgAdmin/psql, basic data visualization (report PDF)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### **Architecture (simplified)**
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+1. **Load sample DB** (DVD Rental/Sakila) into PostgreSQL. :contentReference[oaicite:4]{index=4}
+2. **Execute analysis queries** from `queries.txt` to answer business-style questions. :contentReference[oaicite:5]{index=5}
+3. **Export results** and assemble figures into `report.pdf` for stakeholder-friendly insights. :contentReference[oaicite:6]{index=6}
 
-{% raw %}
+### **Dataset**
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+The **Sakila / DVD Rental** sample database models a DVD rental store (films, actors, customers, inventory, rentals, payments, stores). Official docs + ERD are available from MySQL; a PostgreSQL “DVD Rental” version and ERD are provided by PostgreSQLTutorial. :contentReference[oaicite:7]{index=7}
 
-{% endraw %}
+### **Links**
+
+- **Code repository:** [Sakila-DVD-Rental-Data-Analysis (GitHub)](https://github.com/othman-shbeir/Sakila-DVD-Rental-Data-Analysis) :contentReference[oaicite:8]{index=8}
+- **Queries:** [`queries.txt`](https://github.com/othman-shbeir/Sakila-DVD-Rental-Data-Analysis/blob/master/queries.txt) · **Report:** [`report.pdf`](https://github.com/othman-shbeir/Sakila-DVD-Rental-Data-Analysis/blob/master/report.pdf) :contentReference[oaicite:9]{index=9}
+- **Sample DB (PostgreSQL):** [DVD Rental – PostgreSQLTutorial](https://neon.com/postgresql/postgresql-getting-started/postgresql-sample-database) :contentReference[oaicite:10]{index=10}
+- **Schema reference (MySQL Sakila):** [Sakila docs](https://dev.mysql.com/doc/sakila/en/) :contentReference[oaicite:11]{index=11}
