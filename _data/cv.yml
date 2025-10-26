@@ -15,7 +15,7 @@
       institution: Islamic University of Gaza
       year: "2019 - 2025"
       description:
-        - "Valedictorian, GPA: 95.34% (Ranked 1st in cohort)."
+        - "GPA: 95.34% (Ranked 2nd in cohort)."
         - "Thesis: *HarmOni: Harmonizing Media and Social Experience*."
         - "Coursework: AI, ML, Data Science, Algorithms, Computer Vision, Software Engineering, Cloud Computing."
     - title: Amideast Access Alumni Program
@@ -56,7 +56,7 @@
   contents:
     - year: "2025"
       items:
-        - "Valedictorian, Computer Science (Islamic University of Gaza)."
+        - "2nd of The Cohort, Computer Science (Islamic University of Gaza)."
     - year: "2023"
       items:
         - "6th Place — Udacity Hackathon (*Student Grade Forecaster*)."
