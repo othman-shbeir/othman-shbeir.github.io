@@ -26,6 +26,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
 I am a graduate as one of the top 2 of the class of Computer Science and currently serving as a Teaching Assistant at the Islamic University of Gaza. My work focuses on Artificial Intelligence, Data Science, and Computer Vision, with a strong passion for developing intelligent systems that make a real impact.
 
 I am particularly interested in hybrid recommendation systems, generative AI (especially Large Language Models), and applied machine learning across education, media, and healthcare. My graduation thesis, _HarmOni_, explored AI-driven multimedia synchronization and recommendation, combining collaborative filtering, content-based models, and LLMs for enhanced personalization.
