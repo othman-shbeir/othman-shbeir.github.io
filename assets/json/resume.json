@@ -35,7 +35,7 @@
       "studyType": "B.Sc.",
       "startDate": "2020-09",
       "endDate": "2025-07",
-      "score": "95.34% (Ranked 1st in cohort)"
+      "score": "95.34% (Ranked 2nd in cohort)"
     },
     {
       "institution": "Amideast",
@@ -195,10 +195,10 @@
   ],
   "awards": [
     {
-      "title": "Valedictorian, Computer Science",
+      "title": "2nd of the class, Computer Science",
       "date": "2025-07",
       "awarder": "Islamic University of Gaza",
-      "summary": "Graduated with highest GPA (95.34%)."
+      "summary": "Graduated with the second highest GPA (95.34%)."
     },
     {
       "title": "6th Place, Hackathon",
