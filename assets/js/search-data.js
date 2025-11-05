@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "Projects",
-          description: "",
+          description: "Explore my AI, Data Science, and Web Development projects including computer vision systems, recommendation engines, and full-stack applications.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-résumé",
           title: "Résumé",
-          description: "My Résumé",
+          description: "Curriculum Vitae of Othman Shbeir - AI Engineer, Data Scientist, and Teaching Assistant with expertise in Machine Learning, Computer Vision, and Python.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
