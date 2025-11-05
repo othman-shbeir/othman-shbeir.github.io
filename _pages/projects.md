@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description:
+description: Explore my AI, Data Science, and Web Development projects including computer vision systems, recommendation engines, and full-stack applications.
 nav: true
 nav_order: 3
 display_categories: [AI, Data Science, Web Apps]

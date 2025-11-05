@@ -3,6 +3,7 @@ layout: about
 title: About
 permalink: /
 subtitle: Computer Science Graduate | AI & Data Science Enthusiast | Teaching Assistant
+description: Othman Shbeir is an AI Engineer and Teaching Assistant specializing in Machine Learning, Computer Vision, and Data Science. Graduate from Islamic University of Gaza with expertise in Python, PyTorch, TensorFlow, and recommender systems.
 
 profile:
   align: right

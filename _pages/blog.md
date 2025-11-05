@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Technical blog posts and articles about AI, Machine Learning, Data Science, and software development by Othman Shbeir.
 nav: false
 nav_order: 1
 pagination:
