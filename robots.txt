@@ -1,4 +1,10 @@
 User-agent: *
 Disallow:
 
+# Important pages for indexing
+Allow: /
+Allow: /projects/
+Allow: /cv/
+Allow: /teaching/
+
 Sitemap: https://othman-shbeir.github.io/sitemap.xml
