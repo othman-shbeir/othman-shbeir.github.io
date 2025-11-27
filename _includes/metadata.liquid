@@ -237,7 +237,8 @@
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
-        "name": "{{ author_name }}",
+        "name": "{{ site.title }}",
+        "alternateName": "{{ site.first_name }} {{ site.last_name }}",
         "@context": "https://schema.org"
     }
   </script>
