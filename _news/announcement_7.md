@@ -10,10 +10,10 @@ I’m pleased to share that I’ve completed the *Go Beyond the Numbers: Transla
 
 Throughout the program, I developed and strengthened several analytical and interpretation-focused skills, including:
 
-- **Data storytelling and communication** — presenting insights in a clear, accessible way that supports better decision-making.  
-- **Identifying trends and patterns** — recognizing meaningful signals in complex datasets.  
-- **Insight generation** — moving beyond surface-level metrics to uncover the “why” behind the data.  
-- **Critical thinking with data** — evaluating sources, questioning assumptions, and ensuring accurate interpretation.  
+- **Data storytelling and communication**: presenting insights in a clear, accessible way that supports better decision-making.  
+- **Identifying trends and patterns**: recognizing meaningful signals in complex datasets.  
+- **Insight generation**: moving beyond surface-level metrics to uncover the “why” behind the data.  
+- **Critical thinking with data**: evaluating sources, questioning assumptions, and ensuring accurate interpretation.  
 
 This course has enhanced the way I approach analysis, enabling me to extract deeper value from data and communicate findings more effectively.
 
