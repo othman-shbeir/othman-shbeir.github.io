@@ -40,6 +40,21 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3/";
+            },},{id: "news-completed-ibm-course-delivering-quality-work-with-agility",
+          title: 'Completed IBM Course: Delivering Quality Work with Agility',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_4/";
+            },},{id: "news-completed-google-course-foundations-of-data-science",
+          title: 'Completed Google Course: Foundations of Data Science',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_5/";
+            },},{id: "news-completed-google-course-get-started-with-python",
+          title: 'Completed Google Course: Get Started with Python',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_6/";
             },},{id: "news-graduated-top-of-my-cohort-bachelor-s-in-computer-science",
           title: 'Graduated Top of My Cohort (Bachelor’s in Computer Science)',
           description: "",
@@ -50,6 +65,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
+            },},{id: "news-completed-google-course-go-beyond-the-numbers-translate-data-into-insights",
+          title: 'Completed Google Course: Go Beyond the Numbers – Translate Data into Insights',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_7/";
             },},{id: "projects-mnist-cnn-classifier-99-5",
           title: 'MNIST CNN Classifier (99.5%+)',
           description: "Compact Keras/TensorFlow convolutional network for handwritten digit recognition—reaching ~99.5% test accuracy on MNIST with a clean training/evaluation pipeline.",
