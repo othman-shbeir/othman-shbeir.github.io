@@ -6,14 +6,14 @@ inline: false
 related_posts: false
 ---
 
-I’m excited to share that I’ve completed the *Foundations of Data Science* course, offered by Google through Coursera. This program provided a comprehensive introduction to the core concepts, tools, and thinking that shape modern data science.
+I’m excited to share that I’ve completed the _Foundations of Data Science_ course, offered by Google through Coursera. This program provided a comprehensive introduction to the core concepts, tools, and thinking that shape modern data science.
 
 Throughout the course, I deepened my understanding and strengthened key skills, including:
 
-- **Data analysis fundamentals**: understanding how data is collected, structured, and interpreted.  
-- **Analytical problem-solving**: approaching challenges using evidence-based reasoning and statistical thinking.  
-- **Data ethics and responsibility**: applying best practices for privacy, transparency, and responsible data use.  
-- **Foundations of programming for data**: building comfort with the logic and workflows used in data-oriented code environments.  
+- **Data analysis fundamentals**: understanding how data is collected, structured, and interpreted.
+- **Analytical problem-solving**: approaching challenges using evidence-based reasoning and statistical thinking.
+- **Data ethics and responsibility**: applying best practices for privacy, transparency, and responsible data use.
+- **Foundations of programming for data**: building comfort with the logic and workflows used in data-oriented code environments.
 
 This course has given me a stronger analytical foundation and expanded the way I evaluate, interpret, and communicate data-driven insights.
 
