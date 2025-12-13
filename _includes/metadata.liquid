@@ -59,12 +59,7 @@
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
-    {% assign og_image = page.og_image | default: site.og_image %}
-    {% if og_image contains "://" %}
-      <meta property="og:image" content="{{ og_image }}">
-    {% else %}
-      <meta property="og:image" content="{{ og_image | absolute_url }}">
-    {% endif %}
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
@@ -73,12 +68,7 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
-    {% assign og_image = page.og_image | default: site.og_image %}
-    {% if og_image contains "://" %}
-      <meta name="twitter:image" content="{{ og_image }}">
-    {% else %}
-      <meta name="twitter:image" content="{{ og_image | absolute_url }}">
-    {% endif %}
+    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -238,8 +228,7 @@
         "author":
         {
             "@type": "Person",
-            "name": "{{ author_name }}",
-            "image": "{{ site.og_image | absolute_url }}"
+            "name": "{{ author_name }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
