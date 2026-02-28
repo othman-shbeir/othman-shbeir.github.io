@@ -38,9 +38,9 @@ This program strengthened my ability to design, evaluate, and deploy ML models w
 
 As an AI/ML-focused engineer, I work on predictive systems, recommender pipelines, and applied ML models. This specialization reinforced the mathematical depth and evaluation discipline required to build scalable, interpretable, and production-ready ML systems.
 
-Strong models are important.  
-Reliable, validated, and well-engineered ML systems are critical.
+> Strong models are important.  
+> Reliable, validated, and well-engineered ML systems are critical.
 
-This program strengthened that engineering mindset.
+> This program strengthened that engineering mindset.
 
 [View Professional Certificate](https://coursera.org/verify/professional-cert/TAEG4S9ZG9B9)
