@@ -90,8 +90,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_11/";
-            },},{id: "news-google-advanced-data-analytics-professional-certificate",
-          title: 'Google Advanced Data Analytics Professional Certificate',
+            },},{id: "news-completed-google-advanced-data-analytics-professional-certificate",
+          title: 'Completed Google Advanced Data Analytics Professional Certificate',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_12/";
