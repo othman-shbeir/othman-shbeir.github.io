@@ -70,6 +70,31 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_7/";
+            },},{id: "news-completed-google-course-the-power-of-statistics",
+          title: 'Completed Google Course: The Power of Statistics',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8/";
+            },},{id: "news-completed-google-course-regression-analysis-simplify-complex-data-relationships",
+          title: 'Completed Google Course: Regression Analysis – Simplify Complex Data Relationships',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_9/";
+            },},{id: "news-completed-google-course-the-nuts-and-bolts-of-machine-learning",
+          title: 'Completed Google Course: The Nuts and Bolts of Machine Learning',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_10/";
+            },},{id: "news-completed-google-course-google-advanced-data-analytics-capstone",
+          title: 'Completed Google Course: Google Advanced Data Analytics Capstone',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_11/";
+            },},{id: "news-google-advanced-data-analytics-professional-certificate",
+          title: 'Google Advanced Data Analytics Professional Certificate',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_12/";
             },},{id: "projects-mnist-cnn-classifier-99-5",
           title: 'MNIST CNN Classifier (99.5%+)',
           description: "Compact Keras/TensorFlow convolutional network for handwritten digit recognition—reaching ~99.5% test accuracy on MNIST with a clean training/evaluation pipeline.",
