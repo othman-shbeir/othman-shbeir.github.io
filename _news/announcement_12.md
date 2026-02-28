@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Advanced Data Analytics Specialization"
+title: "Google Advanced Data Analytics Professional Certificate"
 date: 2026-02-25 12:00:00 +0300
 inline: false
 related_posts: false
